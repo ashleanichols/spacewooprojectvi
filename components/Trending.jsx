@@ -1,0 +1,22 @@
+const Trending = () =>{
+    return(
+        <>
+        <div className="container-fluid">
+            <div className="row">
+                <h4 className="woo-heading">Trending</h4>
+                {woos.map((woo,key)=>woo.type === 'trending'?
+                    <div className="col-lg-3 col-md-6 col-6">
+                        <div className="card woo-card">
+                            <Link to={'/detail/'+woo.id} >
+                                <img src={woo.cardImg} class="card-img-top" alt="..." id={woo.id}/>
+                            </Link>
+                        </div> 
+                    </div>:null
+                )}
+            </div>
+        </div>
+        </>
+    )
+}
+
+export default Trending;
